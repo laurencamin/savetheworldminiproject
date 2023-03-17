@@ -90,7 +90,6 @@ if (Math.random() < `"${Alien}"`[0].accuracy) {
 	console.log('You have been hit!');
 }
 
-
 console.log(uss_per_scholas)
 console.log(alien_1)
 uss_per_scholas.attack(alien_1)
