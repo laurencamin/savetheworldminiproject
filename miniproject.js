@@ -1,6 +1,6 @@
 //Save the World Mini Project
 
-//Welcome to USS Per Scholas! Click on a Mission to begin!
+//Welcome to USS Per Scholas!
 
 
 //set USS Per Scholas hull to 20
@@ -8,7 +8,7 @@
 //set Uss Per Scholas accuracy to 0.7
 
 class SpaceShip {
-    constructor(name, color, hull, firePower, accuracy){
+    constructor(name, color, _hull, _firePower, _accuracy){
         this.name = name;
         this.color = color;
         this.hull = 20;
@@ -63,9 +63,9 @@ alienShipAttack() {
     }
 
 alienShipDestroyed() {
-    console.log('You destroyed the alien ship!')
-    //if (Math.random() < `"${Alien}"`[0].accuracy) {
-    //}
+    if (Math.random() < `"${Alien}"`[0].accuracy) {
+        console.log('You destroyed the alien ship!');
+    } 
 }
 nextAlienShip() {
     console.log("You have chosen to continue the game!")
@@ -98,10 +98,25 @@ uss_per_scholas.attackAgain(alien_1)
 alien_1.destroyed(uss_per_scholas)
 
 
-
-
+//1. Prompt shows in the console when player runs the code for the first time.
+//Player responds to prompt "There is a hord of aliens heading your way! attack or retreat?"
+//Player types attack to begin the game. If player types retreat, the game is over.
 //window.prompt(‘sth’)
-//1. Player clicks begin mission button to begin
+//window.prompt('A hord of alien spaceships is heading your way! Would you like to attack or retreat?')
+/*switch (prompt("What is the weather like?")) {
+    case "rainy":
+      console.log("Remember to bring an umbrella.");
+      break;
+    case "sunny":
+      console.log("Dress lightly.");
+    case "cloudy":
+      console.log("Go outside.");
+      break;
+    default:
+      console.log("Unknown weather type!");
+      break;
+  }
+
 
 //2. Screen reads Round 1
 
@@ -115,7 +130,30 @@ alien_1.destroyed(uss_per_scholas)
 
 //7. Loop through round until player or alien ship is
 //eliminated first.
-
+for (let i = 7; i < 7; i--);
+let i = 0;
+let n = 0;
+while (i < 5) {
+  i++;
+  if (i === 3) {
+    continue;
+  }
+  n += i;
+  console.log(n);
+}
+/*switch (prompt("What is the weather like?")) {
+    case "rainy":
+      console.log("Remember to bring an umbrella.");
+      break;
+    case "sunny":
+      console.log("Dress lightly.");
+    case "cloudy":
+      console.log("Go outside.");
+      break;
+    default:
+      console.log("Unknown weather type!");
+      break;
+  }
 //8. If player destroys the ship, they can end the 
 //round by choosing to attack next alien ship or retreat.
 
@@ -125,4 +163,6 @@ alien_1.destroyed(uss_per_scholas)
 
 //10. If player destroys all alien ships, he wins.
 
-//11. Else, player loses the game if destroyed. 
+//11. Else, player loses the game if destroyed. */
+
+
