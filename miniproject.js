@@ -6,7 +6,7 @@
 //set USS Per Scholas hull to 20
 //set USS Per Scholas firepower to 5
 //set Uss Per Scholas accuracy to 0.7
-
+function Submit() {
 class SpaceShip {
     constructor(name, color, _hull, _firePower, _accuracy){
         this.name = name;
@@ -96,63 +96,122 @@ uss_per_scholas.attack(alien_1)
 alien_1.alienShipAttack(uss_per_scholas)
 uss_per_scholas.attackAgain(alien_1)
 alien_1.destroyed(uss_per_scholas)
+uss_per_scholas.destroyed(alien_1)
+
+alert("A hord of alien ships is heading your way!");
+    alert("Will you save the world or wil you retreat?");
+    alert("The choice is yours!");
+  
+      var Name = prompt("Name your ship!");
+      while (Name === "") {
+      alert("Please type a name in the field!")
+      var Name = prompt("Name your ship!");
+      } 
+  
+    alert("Hello " + Name);
+  
+  
+    var start = prompt("Type start to begin the mission");
+  
+    if (start === "") {
+      alert("Please type start to begin the space mission!")
+      throw new Error("you did not save the world!"); 
+  
+  
+    } else {
+      alert("Mission Started " + start);
+    }
+
+    alert("The first alien space ship is approaching!" + "According to our intel, it should be a green alien ship.");
+  
+    alert("The first alien ship finally arrives." + "Lo and behold, it is a green space ship.");
+
+    alert("The green alien ship is getting closer!");
+    var roundZero = prompt("Attack or Retreat")
+    var roundOne;
+    var roundTwo;
+    var roundThree;
+    var roundFour;
+    var roundFive;
+    var roundSix;
+
+    
 
 
-//1. Prompt shows in the console when player runs the code for the first time.
-//Player responds to prompt "There is a hord of aliens heading your way! attack or retreat?"
-//Player types attack to begin the game. If player types retreat, the game is over.
-//window.prompt(‘sth’)
-//window.prompt('A hord of alien spaceships is heading your way! Would you like to attack or retreat?')
-/*switch (prompt("What is the weather like?")) {
-    case "rainy":
-      console.log("Remember to bring an umbrella.");
-      break;
-    case "sunny":
-      console.log("Dress lightly.");
-    case "cloudy":
-      console.log("Go outside.");
-      break;
-    default:
-      console.log("Unknown weather type!");
-      break;
-  }
-
-
-//2. Screen reads Round 1
-
-//3. Player begins round by shooting green alien ship.
-
-//4. Green alien ship shoots back.
-
-//5. If player survives, shoot green alien ship again.
-
-//6. If green alien ship survives, shoot player again.
-
-//7. Loop through round until player or alien ship is
-//eliminated first.
-for (let i = 7; i < 7; i--);
-let i = 0;
-let n = 0;
-while (i < 5) {
-  i++;
-  if (i === 3) {
-    continue;
-  }
-  n += i;
-  console.log(n);
+ function roundZero()  {
+    alert("What will you do?");
+    roundOne = prompt("Attack or Retreat").toLowerCase(); 
 }
 
-//8. If player destroys the ship, they can end the 
-//round by choosing to attack next alien ship or retreat.
+if (roundZero === "attack") {
+    alienShipTwo();
+} else {
+    retreat();
+}
 
-//9. If player chooses to attack the next alien ship,
-//the game contiues. If player decides to retreat,
-//the game is over. 
+function alienShipTwo() {
+    alert("You continue your journey in space.")
+    alert("Suddenly, a yellow alien ship approaches you.")
+    alert("Now what?")
+    roundTwo = prompt("Attack or Retreat").toLowerCase(); 
+}
 
+if (roundTwo === "attack") {
+    alienShipThree();
+} else {
+    retreat();
+}
 
+function alienShipThree() {
+    alert("You are almost half way through the mission!")
+    alert("An orange ship is getting closer!")
+    roundThree = prompt("Attack or Retreat").toLowerCase(); 
+}
 
-//10. If player destroys all alien ships, he wins.
+if (roundThree === "attack") {
+    alienShipFour();
+} else {
+    retreat();
+}
 
-//11. Else, player loses the game if destroyed. */
+function alienShipFour() {
+    alert("The fourth alien ship approaches!")
+    alert("The red alien ship will be harder to defeat.")
+    alert("What's your plan?")
+    roundFour = prompt("Attack or Retreat").toLowerCase(); 
+}
 
+if (roundFour === "attack") {
+    alienShipFive();
+} else {
+    retreat();
+}
 
+function alienShipFive() {
+    alert("Oh no! Another alien ship approaches.")
+    alert("It's the pink alien ship!")
+    roundFive = prompt("Attack or Retreat").toLowerCase(); 
+}
+
+if (roundFive === "attack") {
+    alienShipSix();
+} else {
+     retreat();
+}
+
+function alienShipSix() {
+    alert("The final alien ship is approaching!")
+    alert("It's the dreaded purple alien ship!!")
+    alert("This is your last chance to save the planet!")
+    roundSix = prompt("Attack or Retreat").toLowerCase(); 
+}
+
+if (roundSix === "attack") {
+    winGame();
+} else {
+   retreat();
+}
+function winGame() {
+    alert("Congratulations! You saved the world!!!!")
+}
+}
