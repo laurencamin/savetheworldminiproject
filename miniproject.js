@@ -141,25 +141,15 @@ while (i < 5) {
   n += i;
   console.log(n);
 }
-/*switch (prompt("What is the weather like?")) {
-    case "rainy":
-      console.log("Remember to bring an umbrella.");
-      break;
-    case "sunny":
-      console.log("Dress lightly.");
-    case "cloudy":
-      console.log("Go outside.");
-      break;
-    default:
-      console.log("Unknown weather type!");
-      break;
-  }
+
 //8. If player destroys the ship, they can end the 
 //round by choosing to attack next alien ship or retreat.
 
 //9. If player chooses to attack the next alien ship,
 //the game contiues. If player decides to retreat,
 //the game is over. 
+
+
 
 //10. If player destroys all alien ships, he wins.
 
